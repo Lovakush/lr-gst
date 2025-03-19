@@ -306,38 +306,58 @@ const App = () => {
 
           {/* Industry Comparison */}
           <section className="bg-white rounded-xl shadow-xl p-6 transition-all duration-300 hover:shadow-2xl">
-            <div className="flex items-center border-b border-gray-100 pb-4 mb-4">
-              <div className="bg-purple-100 p-2 rounded-lg mr-4">
-                <Activity className="text-purple-600" size={24} />
-              </div>
-              <h2 className="text-xl font-bold text-gray-800">
-                Industry Comparison - Seasonal Variation
-              </h2>
-            </div>
-            
-            <div className="h-72 bg-gray-50 p-4 rounded-lg">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={seasonalComparisonData} margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
-                  <defs>
-                    <linearGradient id="colorLR" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#4F46E5" stopOpacity={0.8}/>
-                      <stop offset="95%" stopColor="#4F46E5" stopOpacity={0.1}/>
-                    </linearGradient>
-                    <linearGradient id="colorIndustry" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#D97706" stopOpacity={0.8}/>
-                      <stop offset="95%" stopColor="#D97706" stopOpacity={0.1}/>
-                    </linearGradient>
-                  </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-                  <XAxis dataKey="month" />
-                  <YAxis />
-                  <Tooltip contentStyle={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', borderRadius: '8px', boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' }} />
-                  <Legend iconType="circle" />
-                  <Area type="monotone" dataKey="LR Beverages" stroke="#4F46E5" strokeWidth={2} fillOpacity={0.3} fill="url(#colorLR)" />
-                  <Area type="monotone" dataKey="Industry Average" stroke="#D97706" strokeWidth={2} fillOpacity={0.3} fill="url(#colorIndustry)" />
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
+  <div className="flex items-center border-b border-gray-100 pb-4 mb-4">
+    <div className="bg-purple-100 p-2 rounded-lg mr-4">
+      <Activity className="text-purple-600" size={24} />
+    </div>
+    <h2 className="text-xl font-bold text-gray-800">
+      Industry Comparison - Seasonal Variation
+    </h2>
+  </div>
+  
+  <div className="h-72 bg-gray-50 p-4 rounded-lg">
+    <ResponsiveContainer width="100%" height="100%">
+      <LineChart data={seasonalComparisonData} margin={{ top: 5, right: 30, left: 10, bottom: 5 }}>
+        <defs>
+          <linearGradient id="colorLR" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#4F46E5" stopOpacity={0.8}/>
+            <stop offset="95%" stopColor="#4F46E5" stopOpacity={0.1}/>
+          </linearGradient>
+          <linearGradient id="colorIndustry" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="5%" stopColor="#D97706" stopOpacity={0.8}/>
+            <stop offset="95%" stopColor="#D97706" stopOpacity={0.1}/>
+          </linearGradient>
+        </defs>
+        <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+        <XAxis dataKey="month" />
+        <YAxis />
+        <Tooltip 
+          contentStyle={{ 
+            backgroundColor: 'rgba(255, 255, 255, 0.95)', 
+            borderRadius: '8px', 
+            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)' 
+          }} 
+        />
+        <Legend iconType="circle" />
+        <Line 
+          type="monotone" 
+          dataKey="LR Beverages" 
+          stroke="#4F46E5" 
+          strokeWidth={2} 
+          dot={{ stroke: '#4F46E5', strokeWidth: 2, r: 4 }}
+          activeDot={{ r: 8 }}
+        />
+        <Line 
+          type="monotone" 
+          dataKey="Industry Average" 
+          stroke="#D97706" 
+          strokeWidth={2} 
+          dot={{ stroke: '#D97706', strokeWidth: 2, r: 4 }}
+          activeDot={{ r: 8 }}
+        />
+      </LineChart>
+    </ResponsiveContainer>
+  </div>
           </section>
         </div>
 
