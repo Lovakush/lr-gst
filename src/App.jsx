@@ -617,21 +617,21 @@ const App = () => {
             <div className="bg-gray-800 bg-opacity-20 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">LR BEVERAGES</h3>
               <p className="text-gray-300">Authorized Distributor of Coca-Cola Products</p>
-              <p className="text-gray-300 mt-2">GST No: 09AAUFL0642C1ZV</p>
+              <p className="text-gray-300 mt-2">GST No: 09IMXPK8682P1ZC</p>
             </div>
             <div className="bg-gray-800 bg-opacity-20 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Contact Information</h3>
               <p className="text-gray-300">Bhadrauli, S O Bhadrauli</p>
-              <p className="text-gray-300">Agra, Uttar Pradesh - 282005</p>
-              <p className="text-gray-300 mt-2">Phone: +91 9876543210</p>
-              <p className="text-gray-300">Email: lrbeverages@example.com</p>
+              <p className="text-gray-300">Agra, Uttar Pradesh - 283113</p>
+              <p className="text-gray-300 mt-2">Phone: +91 9557362763</p>
+              <p className="text-gray-300">Email: thakurlovakush@gmail.com</p>
             </div>
             <div className="bg-gray-800 bg-opacity-20 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-4 border-b border-gray-700 pb-2">Prepared By</h3>
-              <p className="text-gray-300">CA Firm Name</p>
+              <p className="text-gray-300">AGARWAL SHIPRA & ASSOCIATES</p>
               <p className="text-gray-300">Chartered Accountants</p>
-              <p className="text-gray-300 mt-2">ICAI Reg No: 123456W</p>
-              <p className="text-gray-300">Email: contact@cafirm.com</p>
+              <p className="text-gray-300 mt-2">ICAI Reg No: 018385c</p>
+              {/* <p className="text-gray-300">Email: contact@cafirm.com</p> */}
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
