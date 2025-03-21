@@ -1,5 +1,5 @@
 // src/components/PDFExport.jsx
-import React, { useRef } from 'react';
+import React from 'react';
 import { Download } from 'lucide-react';
 import { jsPDF } from 'jspdf';
 import html2canvas from 'html2canvas';
